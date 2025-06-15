@@ -1,0 +1,200 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray-light: #e5e5e5;
+  --gray-dark: #333;
+  --primary-gradient: linear-gradient(135deg, #740f7d, #0080ff);
+  --shadow-black: 10px 10px 0 var(--black);
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --shadow-soft-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.account {
+      background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 10px 10px 0 var(--black);
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  box-shadow: inset 0 4px 12px rgba(0,0,0, 0.1);
+  border-radius: 40px;
+}
+
+.profile-section {
+  flex: 1 1 300px;
+  padding: 1.5rem;
+  border-radius: 20px;      background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+.profile-photo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-photo-btn {
+  
+        background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black);
+  margin-top: 0.8rem;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.edit-photo-btn:hover {
+  background-color: #555;
+}
+
+.profile-info h2, .profile-info h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.profile-info p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.change-password-btn, .add-card-btn , .logout  {
+  margin-top: 0.5rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+        background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black);
+}
+
+.change-password-btn:hover, .add-card-btn:hover {
+  background-color: #17222eb9;
+}
+
+.cards-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.cards-list li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.trips-section {
+  max-height: 720px;
+  flex: 2 1 400px;
+        background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: inset 0 4px 12px rgba(0,0,0, 0.2);
+  overflow-y: auto;
+}
+
+.trips-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.trip-card {
+        background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ffffff;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.trip-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+.trip-card-text {
+  position: relative;
+  z-index: 2;
+}
+
+.trip-card-text h3,
+.trip-card-text p {
+  margin: 0.3rem 0;
+}
+
+.repeat-trip-btn {
+  margin-top: 0.5rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+        background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black);
+
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.repeat-trip-btn:hover {
+  background-color: #28a745;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .account {
+    flex-direction: column;
+  }
+  .profile-section, .trips-section {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-photo img {
+    width: 90px;
+    height: 90px;
+  }
+  .account {
+    padding: 1rem;
+  }
+  .profile-info h2, .profile-info h3, .trips-section h2 {
+    font-size: 1.1rem;
+  }
+  .trip-card {
+    height: 240px;
+  }
+  .trip-card-text h3 {
+    font-size: 1rem;
+  }
+}
